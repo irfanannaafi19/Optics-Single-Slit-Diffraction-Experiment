@@ -15,12 +15,15 @@ for i=1:1:200
     end
 end
 
+# Horizontal
 Sr=sum(r)/200;
 % plot(Sr)
 
+# Maksimal y = 1 atau maksimal intensitas = 1
 Sn=Sr/max(Sr);
 % plot (Sn)
 
+# Menunjukkan nilai sumbu x sampai nilai negatif
 for j=1:1:1000
     x(j)=j-500;
 end

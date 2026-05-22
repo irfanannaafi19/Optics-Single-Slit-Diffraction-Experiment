@@ -2,10 +2,13 @@ clc;
 clear;
 close all;
 
+% Membaca dan mengambil data warna dari foto
 I = imread("OPTK_PJ2_SET_006_MXA237.jpg");
 
+% Mengambil warna merah (R) untuk semua kolom dan baris
 R = I(:,:,1);
 
+% Memotong foto
 for i=1:1:200
     for j=1:1:1000
         r(i,j) = R(i+170, j+683);  

@@ -43,6 +43,9 @@ end
 % plot(y, Sn2)
 % plot(beta, I_teori, y, Sn2)
 
+% Rentang
+k=1:0.1:736;
+
 % MSE
 Se=0;
 for n=1:1:736

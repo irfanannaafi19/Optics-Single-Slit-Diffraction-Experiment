@@ -41,14 +41,17 @@ for m=1:1:736
 end
 
 % plot(y, Sn2)
-% plot(beta, I_teori, y, Sn2)
-
-% Rentang
-k=1:0.1:736;
+plot(beta, I_teori, y, Sn2)
 
 % MSE
-Se=0;
-for n=1:1:736
-    Se=Se+(I_teori(n)-Sn2(n))^2;
-end
-MSE=Se/736;
+%Se=0;
+% for n=1:1:736
+%    Se=Se+(I_teori(n)-Sn2(n))^2;
+%end
+%MSE=Se/736;
+
+% Rentang
+% k=1:0.1:736;
+
+% for z=1:1:length(k)
+    

@@ -44,14 +44,14 @@ end
 plot(beta, I_teori, y, Sn2)
 
 % MSE
-%Se=0;
-% for n=1:1:736
-%    Se=Se+(I_teori(n)-Sn2(n))^2;
-%end
-%MSE=Se/736;
+Se=0;
+for n=1:1:736
+    Se=Se+(I_teori(n)-Sn2(n))^2;
+end
+MSE=Se/736;
 
-% Rentang
-% k=1:0.1:736;
-
-% for z=1:1:length(k)
-    
+% Mencari Terang Pusat ke Gelap 1
+c=find(y>=2 & y<=4);
+[ymin, p]=min(Sn2(c));
+data=c(p);
+xmin=y(data)

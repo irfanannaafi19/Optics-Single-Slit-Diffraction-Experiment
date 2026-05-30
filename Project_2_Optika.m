@@ -15,7 +15,7 @@ for i=1:1:200
     end
 end
 
-% Mmebuat sumbu vertikal maksimal 1
+% Membuat sumbu vertikal maksimal 1
 Sr=sum(r)/200;
 Sn=Sr/max(Sr);
 
@@ -53,5 +53,5 @@ MSE=Se/736;
 % Lebar Celah
 lam=6.6*10^-5; % Panjang Gelombang Dalam cm
 L=200; % Jarak Dari Celah ke Layar Dalam cm
-P=1.5;
+P=1.5; % Periode yang diukur secara langsung menggunakan penggaris dalam cm
 a=(lam/P)*((L^2)+(P^2))^0.5;

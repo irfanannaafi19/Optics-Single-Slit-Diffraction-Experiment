@@ -43,35 +43,15 @@ end
 % plot(y, Sn2)
 plot(beta, I_teori, y, Sn2)
 
-% MSE
+% MSE untuk Grafik
 Se=0;
 for n=1:1:736
     Se=Se+(I_teori(n)-Sn2(n))^2;
 end
 MSE=Se/736;
 
-% Mencari Terang Pusat ke Gelap 1
-c=find(y>=2 & y<=4); % 2 dan 4 merupakan batas berdasarkan plot yang dibuat
-[ymin, p]=min(Sn2(c));
-data=c(p);
-xmd=y(data); % Jarak data
-
-% P berdasarkan pengukuran
-xmd2=1.5;
-
-% Mencari Terang Pusat ke Gelap 1 Teori
-ct=find(beta>=2 & beta<=4); % 2 dan 4 merupakan batas berdasarkan plot yang dibuat
-[ymint, p]=min(I_teori(ct));
-data_t=ct(p);
-xmt=beta(data_t); % Jarak Teori
-
 % Lebar Celah
 lam=6.6*10^-5; % Panjang Gelombang Dalam cm
 L=200; % Jarak Dari Celah ke Layar Dalam cm
-a=(lam/xmd2)*((L^2)+(xmd2^2))^0.5;
-
-% Lebar Celah Teori
-at=(lam/xmt)*((L^2)+(xmt^2))^0.5;
-
-% MSE Lebar celah
-MSE_a=(a-at)^2;
+P=1.5;
+a=(lam/P)*((L^2)+(P^2))^0.5;
